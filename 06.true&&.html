@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Click</button>
+    <h1>開</h1>
+
+    <script>
+      let x = 123;
+      //   let x = {
+      //     name: "Bill",
+      //     age: 20,
+      //   };
+
+      //   console.log("ex1:", true && true && true && true);
+      //   console.log("ex2:", true && true && false && true);
+      //   console.log("ex3:", 1 && 0 && 1 && 1);
+      //   console.log("ex4:", 1 && 2 && 3 && 4);
+
+      //   if (x && x.name) {
+      //     console.log(x.name);
+      //     console.log(x.age);
+      //   }
+
+      //   console.log("ex5:", false || false || false || false);
+      //   console.log("ex6:", false || false || true || false);
+      //   console.log("ex7:", 1 || 0 || 0 || 0);
+      //   console.log("ex8:", 1 || 2 || 3 || 4);
+
+      //   let y;
+      // let y = 1;
+      //   let z = y + 1 || 3000;
+
+      //   console.log("z", z);
+
+      //   console.log(!true);
+      //   console.log(!false);
+
+      //   console.log(!!true);
+      //   console.log(!!false);
+
+      //   console.log(!!null);
+      //   console.log(!!undefined);
+      //   console.log(!!"");
+      //   console.log(!!0);
+      //   console.log(!!false);
+      //   console.log(!![]);
+      //   console.log(!!{});
+
+      let controller = true;
+      const h1 = document.querySelector("h1");
+      const btn = document.querySelector("button");
+
+      function checkSwitch() {
+        if (controller) {
+          h1.innerHTML = "關";
+          //   controller = false;
+        } else {
+          h1.innerHTML = "開";
+          //   controller = true;
+        }
+        controller = !controller;
+      }
+
+      btn.addEventListener("click", checkSwitch);
+    </script>
+  </body>
+</html>
