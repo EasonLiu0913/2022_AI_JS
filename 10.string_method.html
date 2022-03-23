@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>string method</title>
-  </head>
-  <body>
-    <script>
-      const myString = "12345\n6789\n0aasd\nfghj\nk";
-      const myString2 = "qwerty";
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>string method</title>
+    </head>
+    <body>
+        <script>
+            const myString = "12345T6789T0aasdTfghjTk";
+            const myString2 = "qwerty";
 
-      console.log("charAt(12)", myString.charAt(0));
-      console.log("charCodeAt(12)", myString.charCodeAt(0));
+            console.log("charAt(12)", myString.charAt(0));
+            console.log("charCodeAt(12)", myString.charCodeAt(0));
 
-      //   console.log(myString + myString2);
-      //   console.log(myString.concat(myString2));
+            //   console.log(myString + myString2);
+            //   console.log(myString.concat(myString2));
 
-      console.log("myString", myString);
-      console.log("indexOf:", myString.indexOf("T", 17));
-      console.log("split:", myString.split("\n"));
-    </script>
-  </body>
+            console.log("myString", myString);
+            console.log("indexOf:", myString.indexOf("T", 17));
+            console.log("split:", myString.split("\n"));
+
+            console.log("slice:", myString.slice(+"abc", 8));
+            console.log("substr:", myString.substr(+"abc", 8));
+            console.log("substring:", myString.substring(2, +"abc"));
+
+            const x = "abcd";
+            const y = "ABCD";
+
+            console.log(x.toLocaleLowerCase() == y.toLocaleLowerCase());
+            console.log(x.toLocaleLowerCase() === y.toLocaleLowerCase());
+        </script>
+    </body>
 </html>
