@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>scope let</title>
+    </head>
+    <body>
+        <script>
+            // let 的作用域限制範圍是 大括號
+
+            let x = 10;
+
+            {
+                let x = 20;
+                console.log("x inside a():", x);
+
+                {
+                    let x = 30;
+                    console.log("x inside b():", x);
+                }
+            }
+            console.log("x outside:", x);
+        </script>
+    </body>
+</html>
