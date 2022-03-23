@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .red {
+                color: red;
+            }
+
+            .blue {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root" class="title">
+            <h1>Hi</h1>
+        </div>
+        <div id="root2" class="title"></div>
+
+        <script>
+            const root = document.querySelectorAll(".title");
+
+            root[0].innerHTML = "<h1>Hello <span>World0</span>!</h1>";
+            root[1].innerHTML = "<h1>Hello <span>World1</span>!</h1>";
+
+            console.log(root[0].innerHTML.innerHTML);
+            // NodeList
+            const h1 = document.querySelectorAll("h1");
+
+            h1[0].classList.add("red");
+            h1[1].classList.add("blue");
+        </script>
+    </body>
+</html>
