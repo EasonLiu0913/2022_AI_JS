@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>scope var</title>
+    </head>
+    <body>
+        <script>
+            // var 的作用域限制範圍是 Function
+            // var x = 10;
+            // function a() {
+            //     var x = 20;
+            //     console.log("x inside a():", x);
+
+            //     function b() {
+            //         var x = 30;
+            //         console.log("x inside b():", x);
+            //     }
+
+            //     b();
+            // }
+
+            // a();
+            // console.log("x outside:", x);
+
+            function c(x) {
+                x.push(4);
+                console.log("x inside c()", x);
+            }
+
+            let x = [1, 2, 3];
+            c(x);
+            console.log("x outside:", x);
+        </script>
+    </body>
+</html>
