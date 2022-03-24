@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>form event</title>
+        <style>
+            .red {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="">
+            <label for="username">username</label>
+            <input id="username" name="username" type="text" />
+            <label for="password">password</label>
+            <input id="password" name="password" type="password" />
+            <button id="btnSeePass" type="button">click</button>
+
+            <select name="gender" id="gender">
+                <option value="0">女</option>
+                <option value="1">男</option>
+            </select>
+            <label for="selfIntro">自我介紹</label>
+            <textarea
+                name="selfIntro"
+                id="selfIntro"
+                cols="30"
+                rows="10"
+            ></textarea>
+
+            <button id="btnReset" type="reset">重置</button>
+            <button type="submit">送出</button>
+        </form>
+
+        <script>
+            const form = document.querySelector("form");
+            const btnSeePass = document.querySelector("#btnSeePass");
+            const inputPass = document.querySelector("#password");
+            const gender = document.querySelector("#gender");
+            const selfIntro = document.querySelector("#selfIntro");
+            const buttonReset = document.querySelector("button[type='reset']");
+            const buttonSubmit = document.querySelector(
+                "button[type='submit']"
+            );
+
+            let isPassSee = false;
+
+            btnSeePass.addEventListener("click", function () {
+                if (isPassSee) {
+                    inputPass.setAttribute("type", "password");
+                } else {
+                    inputPass.setAttribute("type", "text");
+                }
+
+                isPassSee = !isPassSee;
+            });
+
+            inputPass.addEventListener("focus", function () {
+                console.log("focus");
+                inputPass.classList.add("red");
+            });
+            inputPass.addEventListener("blur", function () {
+                console.log("blur");
+                inputPass.classList.remove("red");
+            });
+
+            inputPass.addEventListener("change", function () {
+                console.log("change");
+            });
+
+            inputPass.addEventListener("input", function () {
+                console.log("input", inputPass.value);
+            });
+
+            gender.addEventListener("change", function () {
+                console.log("gender change", gender.value);
+            });
+
+            selfIntro.addEventListener("select", function () {
+                console.log("selfIntro select");
+            });
+
+            // buttonReset.addEventListener("click", function () {
+            //     console.log("buttonReset clicked");
+            // });
+
+            form.addEventListener("reset", function () {
+                console.log("reset");
+            });
+
+            form.addEventListener("reset", function () {
+                console.log("reset");
+            });
+
+            form.addEventListener("submit", function () {
+                event.preventDefault();
+                console.log("submit");
+                // 自己寫 ajax 把表單資料送給後端
+            });
+        </script>
+    </body>
+</html>
