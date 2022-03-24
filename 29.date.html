@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>date</title>
+    </head>
+    <body>
+        <script>
+            const now = new Date();
+            // console.log("now:", now);
+            // console.log("now.toISOString():", now.toISOString());
+
+            const today = new Date("2022-03-23");
+            // console.log("today", today);
+
+            const today2 = new Date("2022/03/23");
+
+            // console.log("today2", today2);
+            // console.log("today2", today2.toISOString());
+
+            const dayTime = new Date("2022-03-23T14:29:07.597");
+
+            // console.log("dayTime", dayTime);
+
+            const dayTime2 = new Date("2022-03-23 14:29:07Z");
+            // console.log("dayTime2", dayTime2);
+
+            let d = new Date();
+            console.log(d);
+            console.log(d.getFullYear());
+            console.log(d.getMonth()); //  from 0 to 11
+            console.log(d.getDate());
+            console.log(d.getDay());
+            console.log(d.getHours());
+            console.log(d.getMinutes());
+            console.log(d.getSeconds());
+            console.log(d.getMilliseconds());
+            console.log(d.getTime());
+        </script>
+    </body>
+</html>
