@@ -36,6 +36,7 @@
             .box {
                 height: 400px;
                 border: 1px solid blue;
+                overflow-y: auto;
             }
         </style>
     </head>
@@ -44,7 +45,67 @@
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
-        <div class="box"></div>
+        <div id="textBox" class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eos
+            sequi repellat earum quisquam animi. Iusto sint nulla blanditiis
+            repellendus hic, nam sequi harum accusamus ad inventore velit
+            deserunt quasi autem, ullam non laborum expedita? In numquam
+            possimus dolore id minima, illum blanditiis autem dolores? Optio
+            molestias nemo sit, alias provident expedita. Porro alias est
+            adipisci, error, placeat dolorum recusandae delectus quam excepturi
+            voluptatum minus fugit asperiores numquam obcaecati blanditiis unde
+            quia ullam. Fuga odio impedit, molestiae sequi dolor labore alias
+            molestias distinctio quisquam rem, perferendis, vero omnis quia
+            eaque suscipit? Modi doloremque omnis dignissimos ratione itaque
+            iure. Nemo earum amet eligendi quibusdam quisquam repellendus cumque
+            hic qui velit dolore perspiciatis ullam nihil possimus, adipisci
+            voluptates! Iure rerum aspernatur officia amet similique sunt
+            corporis odio dolor facere illo facilis quam quaerat nisi in vero,
+            praesentium obcaecati porro qui? Recusandae pariatur vel illum
+            saepe, corrupti ad placeat deserunt eum possimus minima omnis error
+            inventore corporis ipsam doloremque molestiae nulla? Eveniet soluta
+            incidunt aliquam labore a, fugit voluptatibus eius similique totam
+            consequuntur, corporis porro harum temporibus ipsam. Iure
+            consequuntur nemo minima quibusdam voluptatibus, quod sit tenetur
+            corrupti? Nihil iste minima ducimus dolores molestiae cumque eum ut?
+            Adipisci possimus aut maiores provident inventore tempore officia
+            iusto architecto asperiores voluptatem, modi voluptate corporis
+            eveniet molestias, qui obcaecati impedit? Itaque quis, veniam facere
+            nemo voluptatibus dolorum, voluptatem officiis distinctio, impedit
+            ab alias blanditiis deserunt quaerat explicabo. Dolorem nesciunt
+            laborum, necessitatibus dolor quae itaque minima, sed et iusto ea
+            dolorum doloremque! Quis ducimus minima porro adipisci similique
+            eveniet totam. Sapiente unde eius quaerat soluta, ut facilis
+            deleniti. Dolor dolorem sed accusantium aut sapiente impedit eaque
+            asperiores ipsam, sunt blanditiis ab. Quisquam commodi odio
+            explicabo aliquam atque, nam maxime quibusdam laborum debitis
+            exercitationem eum adipisci quis dolorem repellendus et expedita!
+            Necessitatibus delectus, soluta quaerat fugit labore dolores
+            distinctio pariatur eius minima facilis itaque quos animi laudantium
+            voluptas odio commodi esse inventore quasi tenetur mollitia
+            quibusdam harum iste! Laudantium excepturi aspernatur eveniet
+            voluptate obcaecati similique nesciunt accusantium, quos totam?
+            Facilis accusantium iusto vero hic repellendus, fuga exercitationem,
+            recusandae inventore voluptates animi eius debitis velit dolorum
+            excepturi beatae sapiente voluptas. Ratione veniam exercitationem
+            quo culpa doloribus eum reprehenderit, rerum excepturi repellendus
+            sed odio. Nihil quam ratione eveniet eaque autem eos, aliquid illo
+            exercitationem laudantium ab placeat expedita? Similique iure
+            eveniet delectus omnis quas, consequuntur asperiores rerum labore
+            aut totam nisi soluta maiores quod explicabo voluptatum, eum quidem
+            vel. Nihil atque neque incidunt doloribus quis exercitationem
+            debitis blanditiis voluptatum ratione, iste, repellat culpa
+            delectus. Recusandae saepe quo architecto animi modi magnam
+            accusantium inventore ratione, et vero nulla nisi repudiandae rerum
+            quod quas sed ex blanditiis itaque debitis temporibus, harum commodi
+            voluptatem? Recusandae veritatis provident possimus enim consectetur
+            modi, alias officiis est explicabo placeat harum ullam commodi sed
+            officia doloremque non voluptatibus, culpa rerum rem quod. Culpa
+            alias nemo molestiae sit delectus nesciunt illo esse, fugiat cumque
+            recusandae doloribus natus ad temporibus quam nostrum tenetur amet
+            nisi neque non tempora deleniti? Maxime inventore quasi id ullam
+            alias? Iste repellendus illo esse!
+        </div>
         <!-- <button>Click</button> -->
         <div class="container">
             <div class="row butterfly hide">
@@ -168,6 +229,11 @@
             // btn.addEventListener("click", function () {
             //     butterfly.classList.remove("hide");
             // });
+
+            const textBox = document.querySelector("#textBox");
+            textBox.addEventListener("scroll", function () {
+                console.log("hi", textBox.scrollTop);
+            });
         </script>
     </body>
 </html>
