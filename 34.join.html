@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>join</title>
+    </head>
+    <body>
+        <script>
+            const myString = "123T456T789";
+
+            console.log("split", myString.split("T").join("-"));
+
+            const myArray = [1, 2, 3, 4, "abc"];
+
+            // console.log("join:", myArray.join(""));
+
+            console.log("myArray pop:", myArray.pop());
+            console.log("myArray:", myArray);
+            console.log("myArray push:", myArray.push(5));
+            console.log("myArray:", myArray);
+            console.log("myArray shift:", myArray.shift());
+            console.log("myArray:", myArray);
+            console.log("myArray unshift:", myArray.unshift(5));
+            console.log("myArray:", myArray);
+
+            const arrayFind = [5, 12, 8, 130, 44];
+            const found = arrayFind.some((element) => element > 10);
+            console.log(found);
+        </script>
+    </body>
+</html>
