@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>array</title>
+    </head>
+    <body>
+        <script>
+            const arr = [12, "Claire", 77, -6];
+
+            for (let i = 0; i < arr.length; i++) {
+                console.log("index:", i, " value:", arr[i]);
+            }
+
+            arr["5"] = 100;
+            console.log(arr);
+
+            for (let s in arr) {
+                console.log(s, ":", typeof s, "value:", arr[s]);
+            }
+        </script>
+    </body>
+</html>
