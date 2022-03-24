@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>mouse event</title>
+        <style>
+            .box {
+                width: 300px;
+                height: 300px;
+                background-color: #ccc;
+                transition: 0.5s;
+            }
+
+            .box.black {
+                background-color: #000;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+
+        <script>
+            const box = document.querySelector(".box");
+
+            // box.addEventListener("click", function () {
+            //     console.log("click");
+            // });
+
+            // box.addEventListener("dblclick", function () {
+            //     console.log("dblclick");
+            // });
+
+            // box.addEventListener("mousedown", function () {
+            //     console.log("mousedown");
+            // });
+            // box.addEventListener("mouseup", function () {
+            //     console.log("mouseup");
+            // });
+
+            // box.addEventListener("mouseover", function () {
+            //     console.log("mouseover");
+            //     box.classList.add("black");
+            // });
+
+            // box.addEventListener("mouseout", function () {
+            //     console.log("mouseout");
+            //     box.classList.remove("black");
+            // });
+
+            box.addEventListener("mousemove", function () {
+                const html = `<p>
+                screenX: <span class="screenX">${event.screenX}</span>
+                screenY: <span class="screenY">${event.screenY}</span> 
+            </p>
+            <p>
+                pageX: <span class="pageX">${event.pageX}</span>
+                pageY: <span class="pageY">${event.pageY}</span> 
+            </p>
+            <p>
+                clientX: <span class="clientX">${event.clientX}</span>
+                clientY: <span class="clientY">${event.clientY}</span>
+            </p>
+            <p>
+                offsetX: <span class="offsetX">${event.offsetX}</span>
+                offsetY: <span class="offsetY">${event.offsetY}</span>
+            </p>`;
+
+                box.innerHTML = html;
+            });
+        </script>
+    </body>
+</html>
