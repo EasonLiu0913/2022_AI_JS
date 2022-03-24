@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>keyboard event</title>
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: darkgreen;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box" style="top: 0px; left: 0px"></div>
+
+        <script>
+            const body = document.querySelector("body");
+            const box = document.querySelector(".box");
+
+            body.addEventListener("keydown", function () {
+                console.log("keydown", event.which);
+                if (event.which === 37) {
+                    // 使用者按了左鍵
+                    box.style.left = parseInt(box.style.left) - 100 + "px";
+                }
+                if (event.which === 38) {
+                    // 使用者按了上鍵
+                    box.style.top = parseInt(box.style.top) - 100 + "px";
+                }
+                if (event.which === 39) {
+                    // 使用者按了右鍵
+                    console.log("box.style.left 1", box.style.left);
+                    box.style.left = parseInt(box.style.left) + 100 + "px";
+                    console.log("box.style.left 2", box.style.left);
+                }
+                if (event.which === 40) {
+                    // 使用者按了下鍵
+                    box.style.top = parseInt(box.style.top) + 100 + "px";
+                }
+            });
+        </script>
+    </body>
+</html>
