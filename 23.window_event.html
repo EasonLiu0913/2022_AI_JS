@@ -42,7 +42,7 @@
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
-        <button>Click</button>
+        <!-- <button>Click</button> -->
         <div class="container">
             <div class="row butterfly hide">
                 <div class="col-3">
@@ -96,13 +96,21 @@
             const butterfly = document.querySelector(".butterfly");
             console.log("butterfly Y:", butterfly.offsetTop);
             window.addEventListener("scroll", function () {
-                console.log("scroll window", scrollY);
+                console.log("scroll window", window.scrollY);
+                const butterflyTop = butterfly.offsetTop;
+                const halfWindowHeight = window.innerHeight / 2;
+
+                if (window.scrollY >= butterflyTop - halfWindowHeight) {
+                    butterfly.classList.remove("hide");
+                } else {
+                    butterfly.classList.add("hide");
+                }
             });
 
-            const btn = document.querySelector("button");
-            btn.addEventListener("click", function () {
-                butterfly.classList.remove("hide");
-            });
+            // const btn = document.querySelector("button");
+            // btn.addEventListener("click", function () {
+            //     butterfly.classList.remove("hide");
+            // });
         </script>
     </body>
 </html>
