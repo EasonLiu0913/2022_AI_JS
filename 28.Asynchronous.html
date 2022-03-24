@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Asynchronous</title>
+    </head>
+    <body>
+        <script>
+            function waitFunc1(callback) {
+                console.log("waitFunc1");
+                setTimeout(function () {
+                    console.log("hi I’m back 1");
+                    callback();
+                }, 3000);
+            }
+
+            function waitFunc2() {
+                console.log("waitFunc2");
+                setTimeout(function () {
+                    console.log("hi I’m back 2");
+                }, 1000);
+            }
+            console.log("start");
+            console.log("1");
+            waitFunc1(waitFunc2);
+
+            // waitFunc();
+            console.log("3");
+            console.log("4");
+            console.log("5");
+            console.log("end");
+        </script>
+    </body>
+</html>
